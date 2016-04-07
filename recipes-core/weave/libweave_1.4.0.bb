@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=2d7a5dc96d830068356b88cc1d24ac31 \
 
 DEPENDS = "openssl expat libevhtp curl avahi"
 
-SRCREV_libweave = "5fe0ac0af3f49e6ab96e18bdcc9e0a0749bbd99f"
+SRCREV_libweave = "eae016cab6044d22b150afdf6f3f3cb5cc1c79fd"
 SRCREV_googletest = "82b11b8cfcca464c2ac74b623d04e74452e74f32"
 
 SRC_URI = "git://weave.googlesource.com/weave/libweave;protocol=https;name=libweave"

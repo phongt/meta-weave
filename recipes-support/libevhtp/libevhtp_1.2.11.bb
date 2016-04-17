@@ -8,9 +8,10 @@ DEPENDS = "libevent"
 SRCREV = "c84f68d258d07c4015820ceb87fd17decd054bfc"
 
 SRC_URI = "git://chromium.googlesource.com/external/github.com/ellzey/libevhtp.git;protocol=https"
+SRC_URI_append = " file://0001-fix-oe-qa-checking-of-pkgconfig.patch"
 
 S = "${WORKDIR}/git"
 
-inherit cmake
+inherit cmake pkgconfig
 
 EXTRA_OECMAKE_append = " -DEVHTP_DISABLE_REGEX:BOOL=ON"

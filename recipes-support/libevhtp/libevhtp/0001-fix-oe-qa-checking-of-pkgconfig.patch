@@ -1,0 +1,27 @@
+From f8e9423e3b6535958fdfffd93f0967c86a8e2117 Mon Sep 17 00:00:00 2001
+From: Phong Tran <tranmanphong@gmail.com>
+Date: Sun, 17 Apr 2016 19:22:42 +0700
+Subject: [PATCH] fix oe qa checking of pkgconfig
+
+this fixes the QA issue
+
+Signed-off-by: Phong Tran <tranmanphong@gmail.com>
+---
+ evhtp.pc.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/evhtp.pc.in b/evhtp.pc.in
+index a7b351f..e9ee395 100644
+--- a/evhtp.pc.in
++++ b/evhtp.pc.in
+@@ -6,6 +6,6 @@ Name: libevhtp
+ Description: A more flexible replacement for libevent's httpd API
+ Version: @PROJECT_VERSION@
+ Libs: -L${libdir} -levhtp
+-Libs.private: @LIBEVHTP_EXTERNAL_LIBS@
++Libs.private: -levent -levent_pthreads -lpthread
+ Cflags: -I${includedir}
+ 
+-- 
+1.9.1
+

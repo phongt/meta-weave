@@ -1,3 +1,2 @@
-DEPENDS += "openssl"
-
-EXTRA_OECONF = "--enable-openssl"
+# Enable openssl support
+PACKAGECONFIG = "openssl"
